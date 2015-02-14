@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource majorVersion="1" minorVersion="6" useXmlUI="false">
+    <theme name="Theme">
+        <val key="@includeNativeBool" value="true" />
+        <val key="RubiksCubeSide.bgColor" value="1f1f1f" />
+        <border key="RubiksCubeSide.border" type="empty" />
+        <val key="RubiksCubeSide.margin" value="0,0,0,0" />
+        <val key="RubiksCubeSide.padding" value="1,1,1,1" />
+        <val key="RubiksCubeSide.transparency" value="255" />
+        <val key="RubiksCubeSquare.bgColor" value="ffffff" />
+        <border key="RubiksCubeSquare.border" type="line" thickness="1" color="0" />
+        <val key="RubiksCubeSquare.fgColor" value="1424a6" />
+        <val key="RubiksCubeSquare.margin" value="0,0,0,0" />
+        <val key="RubiksCubeSquare.padding" value="4,4,4,4" />
+        <val key="RubiksCubeSquare.transparency" value="255" />
+    </theme>
+</resource>

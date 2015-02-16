@@ -11,14 +11,14 @@ class RubikBender {
 
   final private int cubes;
   final private int squares;
-  final private static ColorScheme[] color_schemes = new ColorScheme[]{
-    new ColorScheme(Defaults.COLORS_COMPLETE),
-    new ColorScheme(Defaults.COLORS_NO_BLUE),
-    new ColorScheme(Defaults.COLORS_NO_GREEN),
-    new ColorScheme(Defaults.COLORS_NO_ORANGE),
-    new ColorScheme(Defaults.COLORS_NO_RED),
-    new ColorScheme(Defaults.COLORS_NO_WHITE),
-    new ColorScheme(Defaults.COLORS_NO_YELLOW)
+  final private static ColorPalette[] color_schemes = new ColorPalette[]{
+    new ColorPalette(Defaults.COLORS_COMPLETE),
+    new ColorPalette(Defaults.COLORS_NO_BLUE),
+    new ColorPalette(Defaults.COLORS_NO_GREEN),
+    new ColorPalette(Defaults.COLORS_NO_ORANGE),
+    new ColorPalette(Defaults.COLORS_NO_RED),
+    new ColorPalette(Defaults.COLORS_NO_WHITE),
+    new ColorPalette(Defaults.COLORS_NO_YELLOW)
   };
 
   private int resized_width;
@@ -111,9 +111,9 @@ class RubikBender {
     }
   }
 
-  private void transform_image_with(ColorScheme[] color_schemes) {
+  private void transform_image_with(ColorPalette[] color_schemes) {
     int number_of_color_schemes = color_schemes.length;
-    ColorScheme current_color_scheme;
+    ColorPalette current_color_scheme;
     Image generated_image;
     for (int scheme_index = 0; scheme_index < number_of_color_schemes; ++scheme_index) {
       current_color_scheme = color_schemes[scheme_index];
@@ -217,13 +217,13 @@ class RubikBender {
     int longest_axis = get_longest_axis(big_box);
     switch (longest_axis) {
       case 0:
-        Collections.sort(big_box, Color.color_L_comparator);
+        Collections.sort(big_box, Color.ordered_by_L);
         break;
       case 1:
-        Collections.sort(big_box, Color.color_A_comparator);
+        Collections.sort(big_box, Color.ordered_by_A);
         break;
       case 2:
-        Collections.sort(big_box, Color.color_B_comparator);
+        Collections.sort(big_box, Color.ordered_by_B);
         break;
     }
     int big_box_size = big_box.size();
@@ -340,7 +340,7 @@ class RubikBender {
   }
 
   private Image generate_image_for_color_scheme(int scheme_index) {
-    ColorScheme current_scheme = color_schemes[scheme_index];
+    ColorPalette current_scheme = color_schemes[scheme_index];
     int[] quantized_to_color_scheme_map = quantized_to_scheme_mapping.get(scheme_index);
     int[] distinct_to_quantized_map = distinct_to_quantized_mapping.get(current_scheme.size());
     int number_of_distinct_colors = distinct_colors.size();

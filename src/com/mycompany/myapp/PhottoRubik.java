@@ -23,7 +23,6 @@ public class PhottoRubik {
     catch (IOException ex) {
       Log.error(ex);
     }
-    Log.Level.
   }
 
   public void start() {

@@ -2,7 +2,7 @@ package com.mycompany.myapp;
 
 public class Cube {
 
-  private ColorScheme colorScheme;
+  private ColorPalette colorScheme;
 
   protected static final int FRONT = 0;
   protected static final int BACK = 1;
@@ -36,7 +36,7 @@ public class Cube {
     }
   }
 
-  public Cube(ColorScheme colorScheme) {
+  public Cube(ColorPalette colorScheme) {
     this.colorScheme = colorScheme;
     this.cubeSides = new CubeSide[6];
     this.cubeRows = 0;
@@ -56,7 +56,7 @@ public class Cube {
     }
   }
 
-  public Cube(int cubeRows, ColorScheme colorScheme) {
+  public Cube(int cubeRows, ColorPalette colorScheme) {
     this.colorScheme = colorScheme;
     this.cubeSides = new CubeSide[6];
     this.cubeRows = cubeRows < 1 || cubeRows > 25 ? 0 : cubeRows;
@@ -233,7 +233,7 @@ public class Cube {
     return -1;
   }
 
-  public ColorScheme color_scheme() {
+  public ColorPalette color_scheme() {
     return colorScheme;
   }
 
@@ -245,7 +245,7 @@ public class Cube {
     return new CubeSide(this.cubeSides[side]);
   }
 
-  public void color_cheme(ColorScheme color_scheme) {
+  public void color_cheme(ColorPalette color_scheme) {
 		//TODO this
     //this.colorScheme = new ColorScheme(color_scheme);
   }

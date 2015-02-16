@@ -4,12 +4,12 @@ import com.codename1.ui.plaf.Style;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class ColorScheme {
+public class ColorPalette {
 
   public HashMap<Integer, Style> styles;
   public ArrayList<Color> colors;
 
-  public ColorScheme(int[] colors) {
+  public ColorPalette(int[] colors) {
     this.styles = new HashMap<Integer, Style>();
     this.colors = new ArrayList<Color>();
     RubikSquare square = new RubikSquare();

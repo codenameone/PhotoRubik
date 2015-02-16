@@ -130,7 +130,7 @@ public class Color {
     return (value > 0.04045d ? MathUtil.pow((value + 0.055d) / 1.055d, 2.4d) : value / 12.92d) * 100d;
   }
 
-  public Color closest_for(ColorScheme color_scheme) {
+  public Color closest_for(ColorPalette color_scheme) {
     double max_delta = Defaults.MAX_DELTA;
     Color closest_color = null;
     for (Color color : color_scheme.colors) {
@@ -370,19 +370,19 @@ public class Color {
     return (this.current_L + 1) * (this.current_A + 129) * (this.current_B + 129);
   }
 
-  public static Comparator<Color> color_L_comparator = new Comparator<Color>() {
+  public static Comparator<Color> ordered_by_L = new Comparator<Color>() {
     public int compare(Color first, Color second) {
       return first.current_L - second.current_L;
     }
   };
 
-  public static Comparator<Color> color_A_comparator = new Comparator<Color>() {
+  public static Comparator<Color> ordered_by_A = new Comparator<Color>() {
     public int compare(Color first, Color second) {
       return first.current_A - second.current_A;
     }
   };
 
-  public static Comparator<Color> color_B_comparator = new Comparator<Color>() {
+  public static Comparator<Color> ordered_by_B = new Comparator<Color>() {
     public int compare(Color first, Color second) {
       return first.current_B - second.current_B;
     }

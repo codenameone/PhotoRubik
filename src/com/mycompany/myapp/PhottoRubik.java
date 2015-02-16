@@ -21,7 +21,7 @@ public class PhottoRubik {
         .setMenuBarClass(SideMenuBar.class);
     }
     catch (IOException ex) {
-      Logging.exception(ex);
+      Log.error(ex);
     }
   }
 

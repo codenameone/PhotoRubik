@@ -101,7 +101,7 @@ public class Application {
               display_modified_images_from(path);
             }
             catch (Exception ex) {
-              Logging.exception(ex);
+              Log.error(ex);
             }
           }
         });
@@ -121,7 +121,7 @@ public class Application {
           display_modified_images_from(path);
         }
         catch (Exception ex) {
-          Logging.exception(ex);
+          Log.error(ex);
         }
       }
     });
@@ -138,7 +138,7 @@ public class Application {
             Display.getInstance().share("Created with PhottoRubik", path, "image/png");
           }
           catch (IOException ex) {
-            Logging.exception(ex);
+            Log.error(ex);
           }
         }
       }

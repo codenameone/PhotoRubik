@@ -53,13 +53,13 @@ class RubikBender {
       transform_image_with(color_schemes);
     }
     catch (IOException ex) {
-      Logging.exception(ex);
+      Log.error(ex);
     }
     catch (NumberFormatException ex) {
-      Logging.exception(ex);
+      Log.error(ex);
     }
     catch (ArithmeticException ex) {
-      Logging.exception(ex);
+      Log.error(ex);
     }
     return this.images;
   }

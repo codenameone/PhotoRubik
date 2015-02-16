@@ -289,7 +289,7 @@ public class Application {
         center_container.removeAll();
         colorable = false;
         ArrayList<Counter<RubikSide>> sides = rubik_mosaic.distinct_sides();
-        Collections.sort(sides, Counter.value_comparator_reverse);
+        Collections.sort(sides, Counter.reverse_order);
         Container statistics_container = new Container(new TableLayout(3, 2));
         statistics_container.setScrollable(true);
         statistics_container.addComponent(new Label("Total cubes:"));

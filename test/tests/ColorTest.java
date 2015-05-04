@@ -1,9 +1,9 @@
 package tests;
 
-import cntest.CNTest;
+import com.codename1.testing.AbstractTest;
 import com.mycompany.myapp.Color;
 
-public class ColorTest extends CNTest {
+public class ColorTest extends AbstractTest {
 
   public boolean runTest() throws Exception {
     color_conversion_is_reversible();
@@ -5820,12 +5820,11 @@ public class ColorTest extends CNTest {
     ++counter;
 
     //Act
-    double relative_precision = 1e-15;
     for (int index = 0; index < counter; ++index) {
       //Assert
-      assertEqual(expected[index].current_L, actual[index].current_L, relative_precision, "Failed L on color number: " + index);
-      assertEqual(expected[index].current_L, actual[index].current_L, relative_precision, "Failed A on color number: " + index);
-      assertEqual(expected[index].current_L, actual[index].current_L, relative_precision, "Failed B on color number: " + index);
+      assertEqual(expected[index].current_L, actual[index].current_L, "Failed L on color number: " + index);
+      assertEqual(expected[index].current_L, actual[index].current_L, "Failed A on color number: " + index);
+      assertEqual(expected[index].current_L, actual[index].current_L, "Failed B on color number: " + index);
     }
   }
 }

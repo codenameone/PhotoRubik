@@ -25,20 +25,20 @@ of the transformation and all combinations of results.
 
 4. After you finish editing you can select `Stats`
 
-    [Stats button](images/4.png)
+    ![Stats button](images/4.png)
 
 5. You get the stats about that cube faces you need to build the mosaic irl.
 
-    [Stats](images/5.png)
+    ![Stats](images/5.png)
 
 6. You can repeat the process from the left hamburger menu.
 
-    [Left hamburger](images/6.png)
+    ![Left hamburger](images/6.png)
 
 7. You can set the maximum number of cubes available from the right hamburger
 menu.
 
-    [Right hamburger](images/7.png)
+    ![Right hamburger](images/7.png)
 
 
 ## LICENSE
